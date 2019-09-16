@@ -11,4 +11,8 @@ public class AddressBook {
 	{
 		directory.remove(new BuddyInfo(name));
 	}
+	public static void main(String[] args) 
+	{
+		System.out.println("Address book");
+	}
 }
