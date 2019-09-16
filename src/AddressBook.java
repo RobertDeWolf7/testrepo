@@ -2,17 +2,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AddressBook {
-	private List<BuddyInfo> directory = new ArrayList<BuddyInfo>();
-	public void addBuddy(String name) 
+	private static List<BuddyInfo> directory = new ArrayList<BuddyInfo>();
+	public static void addBuddy(BuddyInfo obj) 
 	{
-		directory.add(new BuddyInfo(name));
+		directory.add(obj);
 	}
-	public void removeBuddy(String name) 
+	public static void removeBuddy(int index) 
 	{
-		directory.remove(new BuddyInfo(name));
+		if (index >= directory.size()| index < 0) 
+		{
+			System.out.println("Index out of range.");
+		}
+		else 
+		{
+			directory.remove(index);
+		}
 	}
 	public static void main(String[] args) 
 	{
-		System.out.println("Address book");
+		BuddyInfo test = new BuddyInfo("Rhys");
+		addBuddy(test);
+		removeBuddy(0);
 	}
 }
