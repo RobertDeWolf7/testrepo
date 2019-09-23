@@ -3,6 +3,10 @@ import java.util.List;
 
 public class AddressBook {
 	private static List<BuddyInfo> directory = new ArrayList<BuddyInfo>();
+	public AddressBook() 
+	{
+		
+	}
 	public static void addBuddy(BuddyInfo obj) 
 	{
 		directory.add(obj);
@@ -23,5 +27,6 @@ public class AddressBook {
 		BuddyInfo test = new BuddyInfo("Rhys");
 		addBuddy(test);
 		removeBuddy(0);
+		//test change
 	}
 }
